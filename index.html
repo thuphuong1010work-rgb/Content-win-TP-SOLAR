@@ -1,0 +1,268 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Content win TP SOLAR</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif+Display:wdth,wght@62.5..100,300..500&display=swap">
+<style>
+/* Layout: editorial hospitality-magazine page on warm off-white; condensed serif for headlines and key numbers, grotesk for everything else; navy info panel reserved for the one key figure. */
+:root{
+  --bg:#F4F2EF; --surface:#FFFFFF; --ink:#000000; --line:#E5E7EB; --line-soft:#E5E7EB;
+  --muted:#5C5A57; --pink:#242E52; --pink-ink:#FFFFFF; --link:#242E52; --bad:#B91C1C; --bar:#ECE9E4;
+  --font:"Inter","Helvetica Neue",Arial,sans-serif;
+  --display:"Noto Serif Display","Century Condensed",Georgia,serif;
+  --mono:var(--font);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141413; --surface:#1E1E1C; --ink:#F4F2EF; --line:#34332F; --line-soft:#2B2A27;
+  --muted:#ABA79F; --pink:#2E3A66; --pink-ink:#FFFFFF; --link:#AFC0F5; --bad:#F87171; --bar:#26251F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141413; --surface:#1E1E1C; --ink:#F4F2EF; --line:#34332F; --line-soft:#2B2A27;
+  --muted:#ABA79F; --pink:#2E3A66; --pink-ink:#FFFFFF; --link:#AFC0F5; --bad:#F87171; --bar:#26251F; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 96px}
+.wrap{max-width:1160px;margin:0 auto}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+
+/* nav: wide utilitarian band */
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:28px;flex-wrap:wrap;align-items:center;padding-block:18px;border-bottom:1px solid var(--ink)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.brand{font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-right:auto;color:var(--ink)}
+.pill{font-size:14px;letter-spacing:.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.pill:hover{text-decoration:underline}
+.chip{display:inline-flex;align-self:start;justify-self:start;border:1px solid var(--ink);border-radius:4px;padding:3px 8px;font-size:11px;line-height:16px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;background:transparent;color:var(--ink)}
+.chip.hot{background:var(--pink);color:var(--pink-ink);border-color:var(--pink)}
+.chip.stop{border-color:var(--bad);color:var(--bad)}
+
+/* hero: left-aligned editorial headline */
+header.hero{padding-block:96px 32px;display:grid;gap:24px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-stretch:70%;font-variation-settings:"wdth" 70;font-weight:400;font-size:clamp(40px,7vw,96px);line-height:1.05;letter-spacing:-0.02em;margin:0}
+h1 .ln,.lede .ln,p .ln{display:block}
+p,li,td{text-wrap:pretty}
+h3{text-wrap:balance}
+.sec-lede{max-width:none!important}
+.card p{max-width:none}
+.nw{white-space:nowrap}
+h1 .mark{color:var(--link);font-style:italic}
+.lede{font-family:var(--display);font-variation-settings:"wdth" 75;font-size:clamp(20px,2.4vw,30px);line-height:1.35;letter-spacing:-0.01em;max-width:none;margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:40px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.stat{padding:24px 20px;display:grid;gap:6px;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .n{font-family:var(--display);font-variation-settings:"wdth" 70;font-weight:400;font-size:clamp(40px,5vw,62px);line-height:1;letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13px;color:var(--muted)}
+.stat.hot{background:var(--pink);color:var(--pink-ink);border-left-color:var(--pink);padding-left:20px}
+.stat.hot .l{color:var(--pink-ink);opacity:.8}
+
+/* sections */
+section{padding-block:96px 0;display:grid;gap:28px}
+h2{font-family:var(--display);font-variation-settings:"wdth" 70;font-weight:400;font-size:clamp(38px,5.4vw,62px);line-height:1.05;letter-spacing:-0.02em;margin:0;text-wrap:balance;padding-bottom:16px;border-bottom:1px solid var(--ink)}
+h3{font-weight:600;font-size:17px;line-height:1.35;margin:0}
+p{margin:0;max-width:68ch}
+.sec-lede{font-family:var(--display);font-variation-settings:"wdth" 75;font-size:clamp(20px,2.2vw,26px);line-height:1.35;max-width:46ch}
+.muted{color:var(--muted)}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:24px;display:grid;gap:12px;align-content:start;min-width:0;overflow-wrap:anywhere}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+ul.clean,ol.clean{margin:0;padding-left:1.2em;display:grid;gap:10px}
+.num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.id{font-family:var(--font);font-size:13px;font-variant-numeric:tabular-nums}
+td .id{white-space:nowrap}
+.hint{font-size:13px;color:var(--muted);max-width:none}
+section,header.hero{scroll-margin-top:72px}
+b{font-weight:600}
+
+/* tables: white surface, hairlines */
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:20px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--bar)}
+tr.top td:first-child{box-shadow:inset 3px 0 0 var(--pink)}
+
+/* steps: numbered editorial row */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.step{padding:20px 16px 8px;border-left:1px solid var(--line);display:grid;gap:8px;align-content:start;overflow-wrap:anywhere}
+.step:first-child{border-left:0;padding-left:0}
+.step .t{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--link);font-weight:600}
+
+footer{padding-block:24px 0;margin-top:96px;border-top:1px solid var(--ink);font-size:12px;color:var(--muted);display:grid;gap:8px}
+
+
+/* script drawer rows */
+tr.kbrow{cursor:pointer}
+tr.kbrow td{white-space:nowrap}
+tr.kbrow:focus-visible td{outline:2px solid var(--link);outline-offset:-2px}
+td.kbtoggle{white-space:nowrap;color:var(--link);font-size:13px;font-weight:500}
+tr.kbrow[aria-expanded="true"] .car{display:inline-block;transform:rotate(180deg)}
+tr.kbrow[aria-expanded="true"] td{background:var(--bar)}
+tr.kbdetail td{background:var(--bg);padding:24px}
+.kb-head{display:grid;gap:6px;margin-bottom:16px}
+.kb-head h4{font-family:var(--display);font-variation-settings:"wdth" 75;font-weight:400;font-size:28px;line-height:1.15;margin:0}
+.kb-meta{font-size:13px;color:var(--muted)}
+.kb-scenes{display:grid;gap:0;border-top:1px solid var(--ink)}
+.kb-scene{display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,1.2fr);gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.kb-scene .sn{font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--link)}
+.kb-scene .lbl{display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.kb-scene .vo{font-family:var(--display);font-variation-settings:"wdth" 80;font-size:18px;line-height:1.45;font-style:italic}
+@media (max-width:760px){.kb-scene{grid-template-columns:1fr;gap:8px}tr.kbdetail td{padding:16px}}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(3){border-left:0;padding-left:0}.stat.hot{padding-left:20px}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step:nth-child(odd){border-left:0;padding-left:0}.grid3{grid-template-columns:1fr}}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step{border-left:0;padding-left:0;border-bottom:1px solid var(--line)}header.hero{padding-block:56px 16px}section{padding-block:64px 0}.brand{width:100%}nav.top{gap:18px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.fill{background:var(--bar);color:var(--link);border-radius:4px;padding:0 5px;white-space:nowrap;font-weight:500}
+table.guide td{white-space:normal;min-width:140px}
+table.guide td:first-child{min-width:150px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:32px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.fact{padding:20px;border-left:1px solid var(--line);display:grid;gap:6px}
+.fact:first-child{border-left:0;padding-left:0}
+.fact .n{font-family:var(--display);font-variation-settings:"wdth" 70;font-size:clamp(36px,4.4vw,56px);line-height:1}
+.fact .l{font-size:13px;color:var(--muted)}
+@media (max-width:640px){.facts{grid-template-columns:1fr}.fact{border-left:0;padding-left:0;border-bottom:1px solid var(--line)}.fact:last-child{border-bottom:0}}
+</style>
+</head><body>
+
+<div class="wrap">
+<nav class="top" aria-label="Mục lục">
+  <span class="brand">TP SOLAR · Hướng dẫn KOC</span>
+  <a class="pill" href="#cach-quay">5 cảnh</a>
+  <a class="pill" href="#loai-den">Theo loại đèn</a>
+  <a class="pill" href="#thong-so">Thông số</a>
+  <a class="pill" href="#mau">Video mẫu</a>
+  <a class="pill" href="#tranh">Không nên</a>
+</nav>
+
+<header class="hero">
+  <span class="eyebrow">Dành cho KOC hợp tác cùng TP Solar</span>
+  <h1><span class="ln"><span class="nw">Làm video</span> <span class="nw">đèn TP Solar</span></span><span class="ln"><span class="mark nw">ra đơn.</span></span></h1>
+  <p class="lede"><span class="ln"><span class="nw">Đây là cách quay</span> <span class="nw">của những video bán tốt nhất.</span></span><span class="ln"><span class="nw">Áp dụng được cho mọi mã đèn.</span></span></p>
+  <div class="facts">
+    <div class="fact"><span class="n">5 cảnh</span><span class="l">Khung chung cho mọi video</span></div>
+    <div class="fact"><span class="n">3 giây</span><span class="l">Đèn sáng ngay từ đầu video</span></div>
+    <div class="fact"><span class="n">≤ 3</span><span class="l">Thông số, đúng mã đèn của bạn</span></div>
+  </div>
+</header>
+
+<section id="cach-quay">
+  <h2>Hướng dẫn quay cho KOC: 5 cảnh</h2>
+  <p class="sec-lede"><span class="ln">Áp dụng cho mọi mã đèn TP Solar.</span><span class="ln">Chữ trong <span class="fill">[ngoặc]</span> là chỗ bạn điền đúng thông số của mã đèn mình nhận.</span></p>
+  <div class="tbl"><table class="guide">
+    <thead><tr><th>Cảnh</th><th>Quay gì</th><th>Nói gì (câu mẫu, nói theo giọng của bạn)</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · 3 giây đầu</b></td><td>Bật đèn ban đêm cho sáng bừng, hoặc quay người nhà đang vui vì có đèn. Không chào hỏi, không giới thiệu kênh.</td><td>“Bật cái đèn lên nè, cái sân sáng rực luôn mọi người!”</td></tr>
+      <tr><td><b>2 · Lý do cần đèn</b></td><td>Một nỗi lo thật của nhà bạn: sợ trộm, tiền điện tăng, hay cúp điện, đèn cũ quá tối, chỗ chưa kéo được điện.</td><td>“Nhà có <span class="fill">[máy móc / xe / vật nuôi]</span>, tối thui sợ trộm lắm, đèn cũ thì không đủ sáng.”</td></tr>
+      <tr><td><b>3 · Cầm đèn trên tay</b></td><td>Cận cảnh mặt đèn, tấm pin, remote. Chỉ nói tối đa 3 thông số, lấy đúng từ hộp hoặc brief.</td><td>“Đèn <span class="fill">[công suất]</span>, <span class="fill">[số chip LED]</span> chip LED, pin <span class="fill">[dung lượng]</span>, bảo hành <span class="fill">[số năm]</span> năm.”</td></tr>
+      <tr><td><b>4 · Lắp và test ban đêm</b></td><td>Quay nhanh lúc lắp (vặn ốc, cắm dây). Trời tối quay cảnh trước/sau khi bật, bấm remote đổi mức sáng.</td><td>“Gắn mấy con ốc là xong. Tối tự sáng, có remote chỉnh sáng. Xung quanh không có điện lưới, chỉ có cây đèn này.”</td></tr>
+      <tr><td><b>5 · Chốt</b></td><td>Tay chỉ vào giỏ hàng góc trái màn hình.</td><td>“Hàng chính hãng TP Solar, bảo hành <span class="fill">[số năm]</span> năm. Bấm giỏ hàng góc trái để mua đúng hàng thật nha.”</td></tr>
+    </tbody></table></div>
+  <div class="grid3">
+    <div class="card"><span class="chip hot">Nên có</span><h3>Phản ứng thật</h3><p>Ngạc nhiên thật khi bật đèn, người nhà cười, ba mẹ tự bấm remote. Người xem tin cảm xúc hơn con số.</p></div>
+    <div class="card"><span class="chip hot">Nên có</span><h3>Chỉ cách lắp</h3><p>Quay 1 – 2 cảnh vặn ốc, cắm dây. Người xem bớt lo “mua về không biết lắp”.</p></div>
+    <div class="card"><span class="chip hot">Nên có</span><h3>Bằng chứng dùng thật</h3><p>“Cái thứ mấy tôi lắp”, “dùng bao lâu rồi vẫn sáng”, “người thân thấy sáng nên nhờ lắp”.</p></div>
+  </div>
+</section>
+
+<section id="loai-den">
+  <h2>Chọn góc kể theo loại đèn</h2>
+  <p class="sec-lede"><span class="ln">Xem mã đèn bạn nhận thuộc nhóm nào, rồi chọn một góc kể bên dưới.</span></p>
+  <div class="tbl"><table class="guide">
+    <thead><tr><th>Loại đèn</th><th>Góc kể nên chọn</th><th>Cảnh nên có</th><th>Video mẫu</th></tr></thead>
+    <tbody>
+      <tr><td><b>Đèn pha có tấm pin rời</b><br><span class="muted">Ví dụ DP11 200W / 300W / 600W</span></td><td>Lắp cho ba mẹ, người thân · Tiết kiệm tiền điện · Hướng dẫn lắp từng bước</td><td>Đặt tấm pin chỗ nắng, nối dây, đèn báo % pin (nếu mã đèn có), bật đèn đêm</td><td>Mẫu 1, 3, 4, 6</td></tr>
+      <tr><td><b>Đèn liền thể / đèn đường</b><br><span class="muted">Ví dụ LT11 500W / 800W</span></td><td>Chống trộm sân, cổng, kho · Lối đi tối</td><td>Đèn cũ tối so với đèn mới, cảm biến sáng lên khi có người đi tới, lắp lên tường hoặc cột có sẵn</td><td>Mẫu 2, 5</td></tr>
+      <tr><td><b>Mã đèn mới, chưa có video mẫu</b></td><td>Chọn góc kể của nhóm gần nhất ở trên</td><td>Giữ đủ 5 cảnh, thông số lấy từ hộp hoặc brief</td><td>—</td></tr>
+    </tbody></table></div>
+</section>
+
+<section id="thong-so">
+  <h2>Thông số: nói đúng mã đèn của bạn</h2>
+  <p class="sec-lede"><span class="ln">Mỗi mã đèn có thông số khác nhau.</span><span class="ln">Không lấy số từ video của KOC khác.</span></p>
+  <div class="tbl"><table class="guide">
+    <thead><tr><th>Thông số</th><th>Lấy ở đâu</th><th>Cách nói cho dễ hiểu</th></tr></thead>
+    <tbody>
+      <tr><td><b>Công suất</b></td><td>Tên sản phẩm, vỏ hộp</td><td>“Đèn <span class="fill">[300W]</span>”, nói đúng mã, không làm tròn lên</td></tr>
+      <tr><td><b>Chip LED</b></td><td>Brief TP Solar</td><td>“<span class="fill">[số]</span> chip LED” — chỉ nói khi brief có ghi</td></tr>
+      <tr><td><b>Pin</b></td><td>Brief TP Solar</td><td>“Pin <span class="fill">[dung lượng]</span>mAh, sạc đủ nắng sáng cả đêm”</td></tr>
+      <tr><td><b>Tấm pin</b></td><td>Xem thực tế sản phẩm</td><td>Rời: “dây dài, pin để chỗ nắng, đèn gắn chỗ cần sáng” · Liền: “gọn, không cần lắp thêm tấm pin”</td></tr>
+      <tr><td><b>Thời gian sáng</b></td><td>Brief TP Solar</td><td>“Sáng tới <span class="fill">[số]</span> tiếng khi sạc đủ nắng” — không hứa sáng mãi khi trời mưa nhiều ngày</td></tr>
+      <tr><td><b>Diện tích chiếu sáng</b></td><td>Brief TP Solar</td><td>“Sân khoảng <span class="fill">[số]</span>m² lắp 1 cái là vừa”, nói kèm độ cao bạn lắp</td></tr>
+      <tr><td><b>Chống nước</b></td><td>Brief TP Solar</td><td>“Chuẩn <span class="fill">[IP…]</span>, để ngoài mưa nắng được”</td></tr>
+      <tr><td><b>Vỏ đèn</b></td><td>Xem thực tế sản phẩm</td><td>Nhôm đúc / kính cường lực / nhựa — cầm lên cho người xem thấy</td></tr>
+      <tr><td><b>Tính năng</b></td><td>Thử trên sản phẩm</td><td>Chỉ nói tính năng mã đèn có thật: remote, hẹn giờ, cảm biến người, báo % pin</td></tr>
+      <tr><td><b>Bảo hành</b></td><td>Tem, brief TP Solar</td><td>“Bảo hành chính hãng <span class="fill">[số năm]</span> năm”</td></tr>
+    </tbody></table></div>
+  <p class="hint">Thông số nào brief không ghi thì không nói. Chưa chắc thì hỏi lại TP Solar trước khi quay.</p>
+</section>
+
+<section id="mau">
+  <h2>Video mẫu đã bán tốt</h2>
+  <p class="sec-lede"><span class="ln">Bấm vào từng dòng để đọc kịch bản.</span><span class="ln">Học cách kể, không chép thông số.</span></p>
+  <div class="tbl"><table>
+    <thead><tr><th class="num">#</th><th>KOC</th><th>Loại đèn</th><th>Góc kể</th><th>Video</th><th aria-label="Kịch bản"></th></tr></thead>
+    <tbody>
+      <tr class="kbrow" data-kb="1" tabindex="0" role="button" aria-expanded="false"><td class="num">1</td><td>realpewpew</td><td>Đèn pha 600W</td><td>Hướng dẫn lắp + phản ứng “sáng giật mình”</td><td><a class="id" href="https://www.tiktok.com/@realpewpew/video/7648176790216740097" target="_blank" rel="noopener">Xem video</a></td><td class="kbtoggle">Kịch bản <span class="car">▾</span></td></tr>
+      <tr class="kbrow" data-kb="2" tabindex="0" role="button" aria-expanded="false"><td class="num">2</td><td>hienonha</td><td>Đèn liền thể 800W</td><td>Chống trộm sân, chòi máy móc</td><td><a class="id" href="https://www.tiktok.com/@hienonha/video/7525662705005432082" target="_blank" rel="noopener">Xem video</a></td><td class="kbtoggle">Kịch bản <span class="car">▾</span></td></tr>
+      <tr class="kbrow" data-kb="4" tabindex="0" role="button" aria-expanded="false"><td class="num">3</td><td>hienonha</td><td>Đèn pha 300W</td><td>Điện tăng giá + an ninh hiên nhà</td><td><a class="id" href="https://www.tiktok.com/@hienonha/video/7538768990819175687" target="_blank" rel="noopener">Xem video</a></td><td class="kbtoggle">Kịch bản <span class="car">▾</span></td></tr>
+      <tr class="kbrow" data-kb="5" tabindex="0" role="button" aria-expanded="false"><td class="num">4</td><td>linhvomg2qi</td><td>Đèn pha 300W</td><td>Quà cho mẹ ở quê, cúp điện mùa bão</td><td><a class="id" href="https://www.tiktok.com/@linhvomg2qi/video/7692777485913672961" target="_blank" rel="noopener">Xem video</a></td><td class="kbtoggle">Kịch bản <span class="car">▾</span></td></tr>
+      <tr class="kbrow" data-kb="3" tabindex="0" role="button" aria-expanded="false"><td class="num">5</td><td>kienthanhle90</td><td>Đèn liền thể 800W</td><td>Lắp trên cột, cảm biến chuyển động</td><td><a class="id" href="https://www.tiktok.com/@kienthanhle90/video/7514534389011746055" target="_blank" rel="noopener">Xem video</a></td><td class="kbtoggle">Kịch bản <span class="car">▾</span></td></tr>
+      <tr class="kbrow" data-kb="6" tabindex="0" role="button" aria-expanded="false"><td class="num">6</td><td>nguyenhuuphu63</td><td>Đèn pha 300W</td><td>Lắp cho nhà anh Hai, đã dùng hơn 1 năm</td><td><a class="id" href="https://www.tiktok.com/@nguyenhuuphu63/video/7657878363851214087" target="_blank" rel="noopener">Xem video</a></td><td class="kbtoggle">Kịch bản <span class="car">▾</span></td></tr>
+    </tbody></table></div>
+  <p class="hint">Thông số trong kịch bản mẫu là của mã đèn KOC đó dùng. Mã đèn của bạn có thể khác.</p>
+</section>
+
+<section id="tranh">
+  <h2>Không nên</h2>
+  <div class="grid2">
+    <div class="card"><h3>Nội dung</h3><ul class="clean">
+      <li>Video hài, drama mà đèn chỉ xuất hiện thoáng qua.</li>
+      <li>Caption không nói là đèn gì. Nên ghi công suất + chỗ lắp, ví dụ “Đèn 300W gắn hiên nhà”.</li>
+      <li>Nói diện tích quá lớn hoặc bắt người xem mua thêm cột cao mới lắp được.</li>
+      <li>Chào hỏi, giới thiệu kênh ở 3 giây đầu.</li></ul></div>
+    <div class="card"><h3>Lời nói</h3><ul class="clean">
+      <li>Lấy thông số từ video của người khác.</li>
+      <li>Nói tính năng mà mã đèn của bạn không có.</li>
+      <li>Câu tuyệt đối như “sáng nhất thị trường”, “không bao giờ hỏng”.</li>
+      <li>Chê hoặc nêu tên thương hiệu khác.</li></ul></div>
+  </div>
+  <div class="card">
+    <h3>Kiểm tra trước khi đăng</h3>
+    <ul class="tasks">
+      <li>3 giây đầu có đèn đang sáng hoặc người đang vui</li>
+      <li>Có 1 lý do thật vì sao nhà cần đèn</li>
+      <li>Tối đa 3 thông số, đúng mã đèn của mình</li>
+      <li>Có cảnh lắp và cảnh test ban đêm</li>
+      <li>Có câu “chính hãng, bảo hành” và tay chỉ giỏ hàng</li>
+      <li>Caption có công suất và chỗ lắp</li>
+    </ul>
+  </div>
+</section>
+
+
+<footer>
+  <span>TP Solar · Hướng dẫn quay video cho KOC · cập nhật 11/2026.</span>
+  <span>Cần bảng thông số đúng mã đèn của bạn: liên hệ người phụ trách booking TP Solar.</span>
+</footer>
+</div>
+
+<script>
+const KB={"1": {"title": "RealPewPew – Đèn pha TP Solar 600W", "prod": "Đèn pha sạc rời 600W · đèn báo % pin, remote đa năng · sân rộng ngoài trời", "goal": "Review chân thực, hài hước; trải nghiệm độ sáng bùng nổ của đèn 600W ngoài sân tối.", "scenes": [["Cảnh 1: Mở đầu", "Trung cảnh: PewPew đứng nói trước camera, tay cầm đèn năng lượng mặt trời.", "Năng lượng mặt trời. Rất nhiều người đã nói về nó nhưng ít người để ý. Hôm nay tôi giới thiệu một trong những con đèn năng lượng mặt trời mà tạp hóa PewPew đang bán, có bảo hành chính hãng. Các bạn yên tâm mua về, có lỗi nhà sản xuất không lo không sử dụng được!"], ["Cảnh 2: Hướng dẫn lắp ráp", "Cận cảnh tay cắm giắc nối dây tấm pin với dây đèn, xoay siết bu-lông chống nước.", "Sử dụng rất đơn giản: chỉnh tấm pin hứng nắng cho phù hợp, nối dây của đèn với dây tấm pin, sau đó siết bu-lông lại."], ["Cảnh 3: Hiển thị sạc & phụ kiện", "Cận cảnh mặt đèn: đèn LED báo dung lượng pin nhấp nháy theo nấc 15%, 25%, 75%, 100%.", "Cái này có thể treo lên, để dưới đất hoặc trên tường tùy ý. Cắm vào là nó đang sạc, nháy lên 15%, 25%, 75%, 100%. Công suất con này là 600W nhé các bạn."], ["Cảnh 4: Test độ sáng thực tế", "Toàn cảnh sân tối ban đêm: PewPew bấm remote bật đèn, ánh sáng bùng lên khắp sân.", "Với độ sáng lớn như thế này các bạn có thể treo… Úi giời ôi! Má nó sáng giật cả mình luôn á! Thề luôn, nó sáng lắm luôn! Có thể treo làm đèn trước khi rẽ vào cổng nhà."], ["Cảnh 5: Remote & kết thúc", "Cận cảnh bấm remote chỉnh các mức sáng, giải thích hẹn giờ, mời mua hàng.", "Uầy sáng thật sự luôn đấy! Có hẹn giờ, chỉnh được nhiều mức sáng tùy gu. Tấm pin không cần vệ sinh nhiều, hạn chế va đập. Anh em mua ngay ở giỏ hàng nhé!"]]}, "2": {"title": "Hiền Ơn Nhà – Chiếu sáng sân rộng LT800 (800W)", "prod": "Đèn LT800 800W · 238 chip LED, pin 36.000mAh (6 cell) · sân nhà, chòi chứa máy móc", "goal": "Đời sống miền Tây: giải quyết nỗi lo trộm cắp, chiếu sáng chòi chứa máy móc và bờ sông.", "scenes": [["Cảnh 1: Giới thiệu sân", "Toàn cảnh sân rộng ban đêm sáng như ban ngày; rọi rõ chòi để đồ, máy xăng, máy xới, xuồng dưới sông, chú cún.", "Tôi bật cái đèn lên nè. Cái sân sáng như ban ngày luôn mọi người! Trước sân là nhà để máy xăng, máy xới, dưới sông có cột cái vỏ. Nhà nuôi cún sợ trộm, hổm lắp đèn năng lượng nhỏ quá không đủ sáng."], ["Cảnh 2: Mở hộp đèn mới", "Cận cảnh mặt đèn LT800 với dải chip LED dày đặc và cụm 6 viên pin bên trong.", "Cho nên tôi lắp thêm cái đèn mới nè! Đèn LT800 công suất 800W, có 6 cục pin 36.000mAh phát sáng được cả đêm."], ["Cảnh 3: Tấm pin & chip LED", "Quay tấm pin đặt ngoài trời và mặt đèn 238 chip LED chiếu góc rộng.", "Tấm pin sạc vô nhanh lắm, chịu nắng mưa tốt. Đèn có 238 mắt chip LED nên chiếu sáng rất rộng. Dùng đèn này là không tốn một nút tiền điện luôn!"], ["Cảnh 4: Lắp đặt & cảm biến", "Siết vài con ốc cố định đèn lên tường hiên, cắm giắc và thử remote.", "Lắp dễ lắm, gắn mấy con ốc là xong. Đèn có cảm biến, trời tối tự sáng. Có remote, thích thì bật, không thích thì tắt."], ["Cảnh 5: Đánh giá & cảnh báo hàng giả", "Cận cảnh tem bảo hành 3 năm, góc màn hình ghim link sản phẩm.", "Đèn TP Solar bảo hành 3 năm nên an tâm. Thị trường giờ nhiều đèn công suất ảo, tấm pin dỏm lắm, mọi người bấm link góc trái để mua hàng chính hãng nha!"]]}, "3": {"title": "Kiên Thành Lê – Đèn liền thể 800W trên cột 6m", "prod": "Đèn liền thể 800W · tấm pin liền mặt sau, cảm biến chuyển động · cột sắt 6m, sân 150–200m²", "goal": "Kỹ thuật: dựng cột sắt 6m để tối ưu vùng phủ sáng của đèn liền thể.", "scenes": [["Cảnh 1: Hiệu ứng ánh sáng", "Góc rộng từ cao chiếu toàn sân 150–200m² sáng rực.", "Lắp cái đèn này không tốn một xu điện, cũng không cần kéo dây. Các bạn coi ánh sáng nè: rất sáng, vùng sáng khá rộng!"], ["Cảnh 2: Thiết kế liền thể", "Cận mặt trước mắt LED hầm hố và mặt sau tích hợp tấm pin.", "Đèn TP Solar 800W. Mắt LED khá hầm hố, tấm pin liền với đèn, không cần lắp thêm tấm pin rời."], ["Cảnh 3: Dựng cột sắt", "Dựng cột sắt 6m, cố định đèn sát đỉnh cột.", "Phụ kiện có tắc kê khoan tường. Không thì sắm cây cột sắt 6m như mình, cho lên gần đỉnh để phủ sáng rộng và đẹp hơn."], ["Cảnh 4: Remote & cảm ứng", "Tay bấm remote: hẹn giờ, chỉnh sáng, thử cảm biến chuyển động.", "Có remote hẹn giờ, chỉnh cấp sáng. Chế độ cảm ứng hay: không có ai thì sáng yếu, có người bước tới vụt sáng 100%."], ["Cảnh 5: Khẳng định độ bền", "Quay chiếc đèn TP Solar cũ lắp 2–3 tháng vẫn sáng đủ đêm.", "TP Solar rất uy tín, mình lắp 2 chiếc 2–3 tháng rồi, chưa bao giờ thất vọng, quanh năm sáng đủ 12 tiếng. Tham khảo góc trái màn hình nhé."]]}, "4": {"title": "Hiền Ơn Nhà – Đèn pha 300W tại hiên nhà, tiết kiệm tiền điện", "prod": "Đèn pha 300W tấm pin Mono rời · chống nước IP68 · hiên nhà", "goal": "Đối phó giá điện tăng bằng đèn pha 300W tấm pin rời ở hiên nhà.", "scenes": [["Cảnh 1: Đặt vấn đề", "Đi lại dưới hiên nhà được chiếu sáng, không bật công tắc điện.", "Riết rồi đèn năng lượng mặt trời còn tiện hơn đèn điện mọi người! Hiên nhà lắp một cái khỏi tốn điện. Điện tăng giá mà không sáng, nên tôi lắp cái đèn 300W TP Solar."], ["Cảnh 2: Tấm pin Mono & dây nối", "Cận tấm pin Mono sạc nhanh và đoạn dây nối dài.", "Cái này là cái thứ 3 tôi lắp rồi đó. Tấm pin Mono sạc nhanh, dây nối dài nên lắp trong nhà hay ngoài sân đều được."], ["Cảnh 3: Cấu tạo & chống nước", "Cận kính cường lực mặt trước, thân nhôm đúc mặt sau, tưới nước kiểm tra IP68.", "Đèn chống nước IP68, gắn ngoài trời thoải mái. Mặt trước kính cường lực, mặt sau hợp kim nhôm rất chắc. Kèm remote và ốc đầy đủ."], ["Cảnh 4: Kiểm chứng sáng 12h", "Đèn sáng từ tối tới rạng sáng hôm sau.", "Trời tối tự sáng liên tục 12 tiếng nha. Hôm bữa tôi test, từ tối tới sáng vẫn còn cháy! Bảo hành 3 năm yên tâm."], ["Cảnh 5: An ninh", "Toàn cảnh quanh nhà rọi sáng rõ đồ đạc.", "Quanh nhà ban đêm tối hù, nguy hiểm trộm cắp, lắp 1–2 cái là sáng. Gắn càng cao chiếu càng xa. Hàng chính hãng TP Solar công suất thật, ánh sáng thật!"]]}, "5": {"title": "Linh Võ – Đèn pha 300W làm quà cho mẹ ở quê", "prod": "Đèn pha công trình 300W · vỏ nhôm đúc nặng tay, sáng 10–12h · khu nhà sau ở quê", "goal": "Tình thân gia đình: tặng mẹ đèn pha, giải quyết nỗi lo cúp điện mùa mưa bão.", "scenes": [["Cảnh 1: Cảm xúc người mẹ", "Người mẹ ở quê cười vui khi khu nhà sau sáng rực.", "Bà mẹ em bả mừng bả khoái á! Bả nói gắn cái đèn này tháng này không tốn 1.000 tiền điện, bả cười quá trời! Người lớn tuổi hay tiết kiệm điện dữ lắm."], ["Cảnh 2: Mở hộp đèn pha", "Cận Linh Võ cầm đèn pha 300W đầm tay.", "Đợt này em tậu cho mẹ cây đèn TP Solar chính hãng 300W. Cầm lên nặng đầm tay cỡ này nè. Đây là đèn pha siêu sáng dùng cho công trình."], ["Cảnh 3: Khắc phục cúp điện", "Trời mưa bão ban đêm cúp điện, khu nhà vẫn sáng nhờ đèn solar.", "Dưới quê hay mưa bão cúp điện. Cúp điện ban đêm có cây đèn này sáng 10–12 tiếng đỡ dữ lắm! Tấm pin để nắng nhẹ là tự sạc."], ["Cảnh 4: Test khu nhà sau", "Đèn pha đặt một góc rọi sáng toàn bộ sân và nhà sau.", "Mở lên cái sáng rực rỡ! Đèn pha gắn đầu này pha lại toàn bộ khu nhà sau. Mẹ em thấy sáng quá cứ cầm remote tắt mở hoài!"]]}, "6": {"title": "Nguyễn Hữu Phú – Đèn pha 300W (324 LED 5054) cho sân ngõ 150m²", "prod": "Đèn pha 300W · 324 chip LED 5054, pin 25.000mAh · sân ngõ 150m²", "goal": "Kỹ thuật: vỏ nhôm đúc, 324 chip LED 5054, chống nước IP68 khi lắp ngoài ngõ.", "scenes": [["Cảnh 1: Đặt hàng cho anh Hai", "Phú nói chuyện với anh Hai về chiếu sáng sân ngõ.", "Ông anh hai thấy dưới chòi mình lắp đèn năng lượng sáng quá, hỏi có cây nào lắp sân ngõ hợp lý không. Có liền, lên lắp cho ổng luôn!"], ["Cảnh 2: Thông số kỹ thuật", "Cận vỏ nhôm đúc, tấm pin Mono lớn, viên pin 25.000mAh, 324 mắt LED 5054.", "Đèn pha TP Solar 300W hợp kim nhôm đúc nguyên khối. Tấm pin Mono to sạc được cả ngày ít nắng, pin 25.000mAh sáng 12h nguyên đêm. 324 chip LED 5054 siêu sáng."], ["Cảnh 3: Lắp đặt & bàn giao", "Khoan bắt gá, nối dây, treo đèn lên ngõ nhà anh Hai.", "Shop kèm đủ phụ kiện, lắp rất đơn giản. Bảo hành chính hãng 3 năm. Mình xài hơn 1 năm mấy rồi vẫn xịn như ban đầu!"], ["Cảnh 4: Test đêm sân 150m²", "Đèn tự bật khi trời tối, rọi sáng toàn bộ sân ngõ.", "Trời tối test cho mọi người xem: sáng không thua đèn điện mà không tốn đồng nào! Ngày tự tắt, đêm tự sáng, IP68 lắp ngoài mưa thoải mái. Sân 150m² lắp con này rất hợp lý!"]]}};
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function toggleKB(tr){
+  const open=tr.getAttribute('aria-expanded')==='true';
+  const next=tr.nextElementSibling;
+  if(open){ if(next&&next.classList.contains('kbdetail')) next.remove(); tr.setAttribute('aria-expanded','false'); return; }
+  const k=KB[tr.dataset.kb]; const cols=tr.children.length;
+  const d=document.createElement('tr'); d.className='kbdetail';
+  d.innerHTML=`<td colspan="${cols}"><div class="kb-head"><h4>${esc(k.title)}</h4><span class="kb-meta">${esc(k.prod)}</span><p class="kb-meta">${esc(k.goal)}</p></div><div class="kb-scenes">${k.scenes.map(sc=>`<div class="kb-scene"><span class="sn">${esc(sc[0])}</span><div><span class="lbl">Cảnh quay</span>${esc(sc[1])}</div><div><span class="lbl">Lời thoại</span><span class="vo">“${esc(sc[2])}”</span></div></div>`).join('')}</div></td>`;
+  tr.after(d); tr.setAttribute('aria-expanded','true');
+}
+document.querySelectorAll('tr.kbrow').forEach(tr=>{
+  tr.addEventListener('click',e=>{ if(e.target.closest('a')) return; toggleKB(tr); });
+  tr.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggleKB(tr); } });
+});
+</script>
+</body></html>
